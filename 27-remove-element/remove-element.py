@@ -5,15 +5,12 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        counter = 0
-        for n in range(len(nums)):
-            if nums[n] == val:
-                nums[n] = '_'
-                counter -= 1
-        if counter < 0:
-            nums.sort()
-            return len(nums[slice(0, counter)])
-        else:
-            return len(nums)
+        pointer = 0
+        for n in nums:
+            if n != val:
+                nums[pointer] = n
+                pointer += 1
+        return pointer
+        
         
         
