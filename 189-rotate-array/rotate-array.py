@@ -5,8 +5,7 @@ class Solution(object):
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        while len(nums) < k:
-            k -= len(nums)
+        k = k % len(nums)
 
         length = len(nums)
         nums += nums[0:length - k]
