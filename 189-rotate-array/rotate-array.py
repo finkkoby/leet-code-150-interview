@@ -7,7 +7,7 @@ class Solution(object):
         """
         k = k % len(nums)
 
-        length = len(nums)
-        nums += nums[0:length - k]
+        length = len(nums) - k
+        nums += nums[0:length]
 
-        del nums[0:length - k]
+        del nums[0:length]
