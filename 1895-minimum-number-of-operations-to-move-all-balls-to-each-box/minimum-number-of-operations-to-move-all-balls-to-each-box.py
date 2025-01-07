@@ -15,16 +15,13 @@ class Solution(object):
 
         n = len(boxes)
 
-        a = []
-        b = []
+        [a,b] = [[], []]
         for x in range(0, n):
             if boxes[x] == '1':
                 b.append(x)
-        
         for i in range(0, n):
             t = 0
             for j in b:
                 t += abs(i - j)
             a.append(t)
-
         return a
